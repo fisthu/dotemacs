@@ -65,7 +65,7 @@
 
 
 (/boot/lazy-major-mode "\\.html?$" web-mode)
-
+(/boot/lazy-major-mode "\\.vue?$" web-mode)
 
 (when dotemacs-web/lsp-css
   (add-hook 'css-mode-hook #'/lsp/activate))

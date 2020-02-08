@@ -32,7 +32,6 @@
 (display-time-mode t)
 (size-indication-mode t)
 
-
 (cond
  ((eq dotemacs-eyecandy/folding 'origami)
   (progn
@@ -176,6 +175,5 @@
 (if (fboundp #'display-line-numbers-mode)
     (add-hook 'find-file-hook #'display-line-numbers-mode)
   (add-hook 'find-file-hook 'linum-mode))
-
 
 (provide 'config-eyecandy)
