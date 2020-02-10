@@ -64,6 +64,14 @@
 
   (load (concat core-directory "core-boot"))
 
+  (require-package 'zenburn-theme)
+  (setq zenburn-override-colors-alist
+        '(("zenburn-bg+05" . "#282828")
+          ("zenburn-bg+1"  . "#2F2F2F")
+          ("zenburn-bg+2"  . "#3F3F3F")
+          ("zenburn-bg+3"  . "#4F4F4F")))
+  (load-theme 'zenburn t)
+
   (setq custom-file (concat user-emacs-directory "custom.el"))
   (when (file-exists-p custom-file)
     (load custom-file))

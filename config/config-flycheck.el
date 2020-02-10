@@ -1,12 +1,14 @@
 (require-package 'flycheck)
+(require-package 'add-node-modules-path)
 
 (setq flycheck-standard-error-navigation t)
-(setq-default flycheck-disabled-checkers '(emacs-lisp-checkdoc html-tidy))
+(setq-default flycheck-disabled-checkers '(emacs-lisp-checkdoc html-tidy javascript-jshint))
 
 (after 'web-mode
   (flycheck-add-mode 'javascript-eslint 'web-mode))
 
 (add-hook 'after-init-hook #'global-flycheck-mode)
+(add-hook 'flycheck-mode-hook 'add-node-modules-path)
 
 (when (display-graphic-p)
   (require-package 'flycheck-pos-tip)

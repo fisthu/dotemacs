@@ -7,3 +7,4 @@ custom.el
 node_modules
 *.elc
 workspace
+.lsp-session*

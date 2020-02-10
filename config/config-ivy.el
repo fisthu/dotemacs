@@ -9,6 +9,8 @@
 
 
 (require-package 'swiper)
+(global-set-key (kbd "C-s") 'swiper)
+
 (after 'swiper
   (defadvice swiper (before dotemacs activate)
     (setq gc-cons-threshold most-positive-fixnum))

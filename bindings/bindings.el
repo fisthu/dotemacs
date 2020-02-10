@@ -193,7 +193,7 @@
 ;   (global-set-key (kbd "C-x p") 'vkill))
 
 (/bindings/define-keys (current-global-map)
-  ("C-s"   #'isearch-forward-regexp)
+  ;; ("C-s"   #'isearch-forward-regexp)
   ("C-M-s" #'isearch-forward)
   ("C-r"   #'isearch-backward-regexp)
   ("C-M-r" #'isearch-backward))

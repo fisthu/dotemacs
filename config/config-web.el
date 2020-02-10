@@ -108,5 +108,11 @@
 (defadvice sgml-delete-tag (after dotemacs activate)
   (indent-region (point-min) (point-max)))
 
+;; configuration for jsx
+(/boot/lazy-major-mode "\\.jsx?$" web-mode)
+(setq web-mode-content-types-alist '(("jsx" . "\\.js[x]?\\'")))
+
+(require-package 'emmet-mode)
+(add-hook 'web-mode-hook 'emmet-mode)
 
 (provide 'config-web)
