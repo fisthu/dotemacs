@@ -11,9 +11,6 @@
 
 
 (setq server-auth-dir (concat dotemacs-cache-directory "server"))
-(require 'server)
-(unless (server-running-p)
-  (server-start))
 
 
 ;; move cursor to the last position upon open
@@ -28,6 +25,14 @@
       savehist-autosave-interval 60
       history-length 1000)
 (savehist-mode)
+
+
+;; desktop
+(setq desktop-path `(,dotemacs-cache-directory))
+(setq desktop-base-file-name "emacs.desktop")
+(setq desktop-base-lock-name "emacs.desktop.lock")
+(setq desktop-save t)
+(desktop-save-mode t)
 
 
 ;; undo
